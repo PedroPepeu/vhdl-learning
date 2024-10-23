@@ -1,0 +1,23 @@
+-- exemplo de block para expressao de guarda
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity latch_block is
+    port
+    (
+        a   :   in  std_logic;
+        sel :   in  std_logic;
+        x   :   out std_logic;
+    );
+end entity latch_block;
+
+architecture main of latch_block is
+begin
+
+    driver: block(sel = '1')
+    begin
+        x   <=  guarded a;
+    end block driver;
+
+end architecture main;

@@ -1,0 +1,121 @@
+|sum_4bit
+A[0] => full_sum:FA1.A
+A[1] => full_sum:FA2.A
+A[2] => full_sum:FA3.A
+A[3] => full_sum:FA4.A
+B[0] => full_sum:FA1.B
+B[1] => full_sum:FA2.B
+B[2] => full_sum:FA3.B
+B[3] => full_sum:FA4.B
+CARRY_IN => full_sum:FA1.CARRY_IN
+S[0] <= full_sum:FA1.SUM
+S[1] <= full_sum:FA2.SUM
+S[2] <= full_sum:FA3.SUM
+S[3] <= full_sum:FA4.SUM
+CARRY_OUT <= full_sum:FA4.CARRY
+
+
+|sum_4bit|full_sum:FA1
+A => half_sum:hs1.A
+B => half_sum:hs1.B
+CARRY_IN => half_sum:hs2.B
+SUM <= half_sum:hs2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA1|half_sum:hs1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA1|half_sum:hs2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA2
+A => half_sum:hs1.A
+B => half_sum:hs1.B
+CARRY_IN => half_sum:hs2.B
+SUM <= half_sum:hs2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA2|half_sum:hs1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA2|half_sum:hs2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA3
+A => half_sum:hs1.A
+B => half_sum:hs1.B
+CARRY_IN => half_sum:hs2.B
+SUM <= half_sum:hs2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA3|half_sum:hs1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA3|half_sum:hs2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA4
+A => half_sum:hs1.A
+B => half_sum:hs1.B
+CARRY_IN => half_sum:hs2.B
+SUM <= half_sum:hs2.SUM
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA4|half_sum:hs1
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_4bit|full_sum:FA4|half_sum:hs2
+A => SUM.IN0
+A => CARRY.IN0
+B => SUM.IN1
+B => CARRY.IN1
+SUM <= SUM.DB_MAX_OUTPUT_PORT_TYPE
+CARRY <= CARRY.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,35 @@
+-- Exemplo de For Generate
+-- Autor: Pedro Pepeu
+-- Data: 23/10/24
+
+-- Bibliotecas e pacotes
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Entity
+entity for_generate is
+	generic
+	(
+		n	:		natural	:=	8	-- numero de entradas
+	);
+	port
+	(
+		i	:	in	std_logic_vector(1 to n);
+		o	:	out	std_logic
+	);
+end entity for_generate;
+
+-- Architecture
+architecture main of for_generate is
+	signal a	:		std_logic_vector(1 to n);
+begin
+
+	o	<=	a(n);
+	a(1)	<=	i(i);
+	g1: for x in 2 to n generate
+		a(x) <= i(x) xor a(x-1);
+	end generate g1;
+
+end architecture main;
+
+-- Configuracao
